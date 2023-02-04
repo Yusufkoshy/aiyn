@@ -1,104 +1,100 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br />
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener"
-        >vue-cli documentation</a
-      >.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel"
-          target="_blank"
-          rel="noopener"
-          >babel</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router"
-          target="_blank"
-          rel="noopener"
-          >router</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-vuex"
-          target="_blank"
-          rel="noopener"
-          >vuex</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint"
-          target="_blank"
-          rel="noopener"
-          >eslint</a
-        >
-      </li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li>
-        <a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a>
-      </li>
-      <li>
-        <a href="https://forum.vuejs.org" target="_blank" rel="noopener"
-          >Forum</a
-        >
-      </li>
-      <li>
-        <a href="https://chat.vuejs.org" target="_blank" rel="noopener"
-          >Community Chat</a
-        >
-      </li>
-      <li>
-        <a href="https://twitter.com/vuejs" target="_blank" rel="noopener"
-          >Twitter</a
-        >
-      </li>
-      <li>
-        <a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a>
-      </li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li>
-        <a href="https://router.vuejs.org" target="_blank" rel="noopener"
-          >vue-router</a
-        >
-      </li>
-      <li>
-        <a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-devtools#vue-devtools"
-          target="_blank"
-          rel="noopener"
-          >vue-devtools</a
-        >
-      </li>
-      <li>
-        <a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener"
-          >vue-loader</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-          rel="noopener"
-          >awesome-vue</a
-        >
-      </li>
-    </ul>
+    <header>
+      <h1 v-motion-slide-bottom class="text-center pt-96 text-white text-6xl">
+        مكتب عين
+        <span v-motion-slide-bottom class="text-yellow-600 rounded-xl">.</span>
+      </h1>
+      <h2
+        v-motion-slide-bottom
+        class="text-center pt-7 tracking-wider text-white text-4xl"
+      >
+        لجميع أنواع التأشيرات
+      </h2>
+    </header>
+    <section
+      v-motion
+      :initial="{
+        opacity: 0,
+        y: 200,
+      }"
+      :visible="{
+        opacity: 1,
+        y: 0,
+        delay: 900,
+      }"
+      class="my-10 flex flex-col items-center"
+    >
+      <p class="text-3xl lg:text-7xl md:text-6xl text-yellow-700">
+        وَأَتِمُّوا الْحَجَّ وَالْعُمْرَةَ لِلَّهِ
+      </p>
+      <div class="quran">
+        <img class="" src="../assets/images/Quran.png" alt="" />
+      </div>
+    </section>
+    <section
+      v-motion
+      :initial="{
+        opacity: 0,
+        y: 200,
+      }"
+      :visible="{
+        opacity: 1,
+        y: 0,
+        delay: 900,
+      }"
+      class="my-10 sm:mx-0 md:mx-5 lg:mx-32 flex flex-col items-center lg:flex-row justify-evenly"
+    >
+      <div
+        v-motion
+        :initial="{
+          opacity: 0,
+          x: 200,
+        }"
+        :visible="{
+          opacity: 1,
+          x: 0,
+          delay: 900,
+        }"
+        class="text p-1 lg:p-7 md:p-7 rounded-xl mx-20 mb-7"
+      >
+        <h2 class="text-3xl text-yellow-700">مكتب عين</h2>
+        <p class="text-xl pt-5 list-disc">لخدمات الحج والعمرة</p>
+        <li class="my-3 text-xl">برامج متنوعة.</li>
+        <li class="my-3 text-xl">فنادق مميزة.</li>
+        <li class="my-3 text-xl">طيران أسيوط و سوهاج.</li>
+      </div>
+      <div>
+        <img
+          class="rounded-3xl mr-auto"
+          src="../assets/images/hujaaj.jpg"
+          alt=""
+        />
+      </div>
+    </section>
+    <section
+      v-motion
+      :initial="{
+        opacity: 0,
+        y: 200,
+      }"
+      :visible="{
+        opacity: 1,
+        y: 0,
+        delay: 900,
+      }"
+      class="hadith__section my-28 mx-5 py-20 flex flex-col items-center"
+    >
+      <h2 class="text-3xl lg:text-5xl md:text-6xl text-yellow-500">
+        قَالَ رَسُولَ اللَّهِ ﷺ
+      </h2>
+      <p
+        class="text-white text-center mt-6 text-3xl lg:text-3xl md:text-6xl leading-10"
+      >
+        الْعُمْرَةُ إِلَى الْعُمْرَةِ كَفَّارَةٌ لِمَا بَيْنَهُمَا، وَالْحَجُّ
+        الْمَبْرُورُ لَيْسَ لَهُ جَزَاءٌ إِلَّا الْجَنَّةَ
+      </p>
+    </section>
   </div>
 </template>
 
@@ -113,18 +109,23 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
+header {
+  background-image: url(../assets/images/header2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding-bottom: 25em;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+.text {
+  box-shadow: 0 0 4px 3px #553c09;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+
+.hadith__section {
+  background-image: url(../assets/images/kaba-cover.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 </style>
